@@ -1,1 +1,1 @@
-# note-take-maven
+# Note Taker Starter Code
