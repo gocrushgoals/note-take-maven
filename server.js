@@ -10,6 +10,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
+//const dbJson = JSON.parse(fs.readFileSync("db/db.json","utf8"));
+
 
 app.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, "/public/index.html"));
@@ -23,12 +25,14 @@ app.get("/notes", function (req, res) {
 app.route("/api/notes")
     // Grab the notes list 
     .get(function (req, res) {
+        const database = JSON.parse(fs.readFileSync("db/db.json","utf8"));
         res.json(database);
     })
 
     // Add a new note to the json db file.
     .post(function (req, res) {
         let jsonFilePath = path.join(__dirname, "/db/db.json");
+        const database = JSON.parse(fs.readFileSync("db/db.json","utf8"));
         let newNote = req.body;
 
         
@@ -62,6 +66,7 @@ app.route("/api/notes")
 
 app.delete("/api/notes/:id", function (req, res) {
     let jsonFilePath = path.join(__dirname, "/db/db.json");
+    const database = JSON.parse(fs.readFileSync("db/db.json","utf8"));
     // request to delete note by id
     for (let i = 0; i < database.length; i++) {
 
