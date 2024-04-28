@@ -43,7 +43,6 @@ Resources used to refine this project include:
 Source Code: https://github.com/coding-boot-camp/miniature-eureka 
 Xpert Learning Assistant
 Youtube guides
-Stack Overflow
 Tabnine AI
 
 README Guide: 
