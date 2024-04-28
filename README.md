@@ -40,6 +40,7 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 
 ## Credits
 Resources used to refine this project include:
+Source Code: https://github.com/coding-boot-camp/miniature-eureka 
 Xpert Learning Assistant
 Youtube guides
 Stack Overflow
